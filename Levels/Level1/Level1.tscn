@@ -1,8 +1,79 @@
-[gd_scene load_steps=3 format=3 uid="uid://km7n274l66dj"]
+[gd_scene load_steps=17 format=3 uid="uid://km7n274l66dj"]
 
 [ext_resource type="Texture2D" uid="uid://ig8wq7yahx87" path="res://Levels/Level1/BG.png" id="1_savf4"]
+[ext_resource type="Script" path="res://Actors/Player/Player.gd" id="2_1o7g3"]
+[ext_resource type="Texture2D" uid="uid://dp3emxhorvutk" path="res://Actors/Player/PlayerSS.png" id="2_b7pti"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v0gpt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywb5b"]
+atlas = ExtResource("2_b7pti")
+region = Rect2(0, 0, 780, 1020)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80lpj"]
+atlas = ExtResource("2_b7pti")
+region = Rect2(780, 0, 780, 1020)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxou5"]
+atlas = ExtResource("2_b7pti")
+region = Rect2(1560, 0, 780, 1020)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnj4j"]
+atlas = ExtResource("2_b7pti")
+region = Rect2(0, 1020, 780, 1020)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1gcr"]
+atlas = ExtResource("2_b7pti")
+region = Rect2(780, 1020, 780, 1020)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5761e"]
+atlas = ExtResource("2_b7pti")
+region = Rect2(1560, 1020, 780, 1020)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p6672"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywb5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80lpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxou5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnj4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1gcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5761e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_obehr"]
+radius = 12.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mpkiw"]
+a = Vector2(35, 35)
+b = Vector2(32, 1000)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kxnjh"]
+a = Vector2(35, 45)
+b = Vector2(1120, 45)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rrolm"]
+a = Vector2(-35, 37)
+b = Vector2(-35, 1000)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2kt8s"]
+a = Vector2(35, 0)
+b = Vector2(1120, 0)
 
 [node name="MarginContainer" type="MarginContainer"]
 material = SubResource("CanvasItemMaterial_v0gpt")
@@ -24,6 +95,39 @@ size_flags_horizontal = 3
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/VBoxContainer"]
 texture = ExtResource("1_savf4")
 centered = false
+
+[node name="Player" type="CharacterBody2D" parent="HBoxContainer/VBoxContainer/Sprite2D"]
+position = Vector2(552, 865)
+motion_mode = 1
+script = ExtResource("2_1o7g3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer/VBoxContainer/Sprite2D/Player"]
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_p6672")
+frame = 5
+frame_progress = 0.0478822
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBoxContainer/VBoxContainer/Sprite2D/Player"]
+position = Vector2(0, -9)
+shape = SubResource("CircleShape2D_obehr")
+
+[node name="MapBorder" type="StaticBody2D" parent="HBoxContainer/VBoxContainer/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBoxContainer/VBoxContainer/Sprite2D/MapBorder"]
+position = Vector2(20, 0)
+shape = SubResource("SegmentShape2D_mpkiw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HBoxContainer/VBoxContainer/Sprite2D/MapBorder"]
+position = Vector2(0, 10)
+shape = SubResource("SegmentShape2D_kxnjh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="HBoxContainer/VBoxContainer/Sprite2D/MapBorder"]
+position = Vector2(1147, 0)
+shape = SubResource("SegmentShape2D_rrolm")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="HBoxContainer/VBoxContainer/Sprite2D/MapBorder"]
+position = Vector2(0, 960)
+shape = SubResource("SegmentShape2D_2kt8s")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_direction = 2
