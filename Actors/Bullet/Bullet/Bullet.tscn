@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bcycvv6bm41et"]
 
 [ext_resource type="Script" path="res://Actors/Bullet/Bullet/Bullet.gd" id="1_lvadf"]
-[ext_resource type="Texture2D" uid="uid://c4q2r0leukwyj" path="res://Actors/Bullet/BulletSS.png" id="2_lpous"]
+[ext_resource type="Texture2D" uid="uid://j68uhr3qwh0m" path="res://Actors/Bullet/BulletSS.png" id="2_lpous"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pt0ts"]
 atlas = ExtResource("2_lpous")
@@ -11,6 +11,7 @@ region = Rect2(0, 0, 64, 64)
 size = Vector2(64, 20)
 
 [node name="Bullet" type="RigidBody2D"]
+collision_mask = 0
 script = ExtResource("1_lvadf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
