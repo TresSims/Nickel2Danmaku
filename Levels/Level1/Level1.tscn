@@ -21,11 +21,7 @@ custom_minimum_size = Vector2(1185, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/VBoxContainer/CenterContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/VBoxContainer"]
 texture = ExtResource("1_savf4")
 centered = false
 
