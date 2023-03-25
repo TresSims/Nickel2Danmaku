@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://52nlwpn2gx15"]
+
+[ext_resource type="FontFile" uid="uid://baevfs0aif6di" path="res://UI/Fonts/H-Terminal.otf" id="1_jsfok"]
+
+[resource]
+default_font = ExtResource("1_jsfok")
+default_font_size = 12
