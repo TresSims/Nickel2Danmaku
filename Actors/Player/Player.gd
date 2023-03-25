@@ -4,6 +4,8 @@ extends CharacterBody2D
 const SPEED = 600.0
 const MOD = 0.5;
 
+var HP = 3
+
 @onready var _animated_sprite = $AnimatedSprite2D
 
 var frame = 1

@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://km7n274l66dj"]
+[gd_scene load_steps=18 format=3 uid="uid://km7n274l66dj"]
 
 [ext_resource type="Texture2D" uid="uid://ig8wq7yahx87" path="res://Levels/Level1/BG.png" id="1_savf4"]
 [ext_resource type="Script" path="res://Actors/Player/Player.gd" id="2_1o7g3"]
+[ext_resource type="PackedScene" uid="uid://bcycvv6bm41et" path="res://Actors/Bullet/Bullet/Bullet.tscn" id="2_3dt5c"]
 [ext_resource type="Texture2D" uid="uid://dp3emxhorvutk" path="res://Actors/Player/PlayerSS.png" id="2_b7pti"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v0gpt"]
@@ -95,6 +96,9 @@ size_flags_horizontal = 3
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/VBoxContainer"]
 texture = ExtResource("1_savf4")
 centered = false
+
+[node name="Bullet" parent="HBoxContainer/VBoxContainer/Sprite2D" instance=ExtResource("2_3dt5c")]
+position = Vector2(567, 466)
 
 [node name="Player" type="CharacterBody2D" parent="HBoxContainer/VBoxContainer/Sprite2D"]
 position = Vector2(552, 865)
