@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://km7n274l66dj"]
+
+[ext_resource type="Texture2D" uid="uid://ig8wq7yahx87" path="res://Levels/Level1/BG.png" id="1_savf4"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v0gpt"]
+
+[node name="MarginContainer" type="MarginContainer"]
+material = SubResource("CanvasItemMaterial_v0gpt")
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(1185, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/VBoxContainer/CenterContainer"]
+texture = ExtResource("1_savf4")
+centered = false
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="POINTS" type="RichTextLabel" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "POINTS"
+fit_content = true
+
+[node name="BOMBS" type="RichTextLabel" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "BOMBS"
+fit_content = true
+
+[node name="LIVES" type="RichTextLabel" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "LIVES"
+fit_content = true
