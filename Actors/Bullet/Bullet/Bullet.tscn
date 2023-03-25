@@ -11,6 +11,7 @@ region = Rect2(0, 0, 64, 64)
 size = Vector2(64, 20)
 
 [node name="Bullet" type="RigidBody2D"]
+collision_mask = 0
 script = ExtResource("1_lvadf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
