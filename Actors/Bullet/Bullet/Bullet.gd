@@ -22,9 +22,7 @@ func _process(delta):
 
 func _on_body_entered(body:Node):
     print(body)
-    if(body.name == "Player"):
-        print("Hit that player!")
-    else:
-        print("Musta been a wall")
+    if body.has_method("get_hit"):
+        body.get_hit()
 
     queue_free()

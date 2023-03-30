@@ -1,64 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://km7n274l66dj"]
+[gd_scene load_steps=13 format=3 uid="uid://km7n274l66dj"]
 
 [ext_resource type="Texture2D" uid="uid://ig8wq7yahx87" path="res://Levels/Level1/BG.png" id="1_savf4"]
-[ext_resource type="Script" path="res://Actors/Player/Player.gd" id="2_1o7g3"]
 [ext_resource type="PackedScene" uid="uid://bcycvv6bm41et" path="res://Actors/Bullet/Bullet/Bullet.tscn" id="2_3dt5c"]
-[ext_resource type="Texture2D" uid="uid://dp3emxhorvutk" path="res://Actors/Player/PlayerSS.png" id="2_b7pti"]
+[ext_resource type="PackedScene" uid="uid://bind8rvync2mo" path="res://Actors/Player/Player.tscn" id="3_bvn5h"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v0gpt"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ywb5b"]
-atlas = ExtResource("2_b7pti")
-region = Rect2(0, 0, 780, 1020)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_80lpj"]
-atlas = ExtResource("2_b7pti")
-region = Rect2(780, 0, 780, 1020)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mxou5"]
-atlas = ExtResource("2_b7pti")
-region = Rect2(1560, 0, 780, 1020)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fnj4j"]
-atlas = ExtResource("2_b7pti")
-region = Rect2(0, 1020, 780, 1020)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r1gcr"]
-atlas = ExtResource("2_b7pti")
-region = Rect2(780, 1020, 780, 1020)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5761e"]
-atlas = ExtResource("2_b7pti")
-region = Rect2(1560, 1020, 780, 1020)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_p6672"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ywb5b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_80lpj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mxou5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fnj4j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r1gcr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5761e")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_obehr"]
-radius = 12.0
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_mpkiw"]
 a = Vector2(35, 35)
@@ -116,23 +62,7 @@ centered = false
 metadata/_edit_lock_ = true
 
 [node name="Bullet" parent="HBoxContainer/VBoxContainer/Sprite2D" instance=ExtResource("2_3dt5c")]
-position = Vector2(794, 502)
-
-[node name="Player" type="CharacterBody2D" parent="HBoxContainer/VBoxContainer/Sprite2D"]
-position = Vector2(552, 865)
-collision_mask = 3
-motion_mode = 1
-script = ExtResource("2_1o7g3")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer/VBoxContainer/Sprite2D/Player"]
-scale = Vector2(0.15, 0.15)
-sprite_frames = SubResource("SpriteFrames_p6672")
-frame = 5
-frame_progress = 0.0478822
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HBoxContainer/VBoxContainer/Sprite2D/Player"]
-position = Vector2(0, -9)
-shape = SubResource("CircleShape2D_obehr")
+position = Vector2(592, 48)
 
 [node name="MapBorder" type="StaticBody2D" parent="HBoxContainer/VBoxContainer/Sprite2D"]
 visible = false
@@ -176,6 +106,9 @@ shape = SubResource("SegmentShape2D_ft15i")
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="HBoxContainer/VBoxContainer/Sprite2D/BulletBorder"]
 position = Vector2(1165, 0)
 shape = SubResource("SegmentShape2D_hqw3l")
+
+[node name="Player" parent="HBoxContainer/VBoxContainer/Sprite2D" instance=ExtResource("3_bvn5h")]
+position = Vector2(568, 867)
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_direction = 2
