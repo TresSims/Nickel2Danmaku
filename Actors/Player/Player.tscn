@@ -57,13 +57,17 @@ animations = [{
 radius = 12.0
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(552, 865)
 collision_mask = 3
 motion_mode = 1
+platform_on_leave = 2
 script = ExtResource("1_i8mc7")
 
 [node name="VulnTimer" type="Timer" parent="."]
 wait_time = 3.0
+one_shot = true
+
+[node name="ReloadTimer" type="Timer" parent="."]
+wait_time = 0.2
 one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -75,3 +79,6 @@ frame_progress = 0.0478822
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -9)
 shape = SubResource("CircleShape2D_obehr")
+
+[node name="BulletSpawner" type="Node2D" parent="."]
+position = Vector2(0, -91)

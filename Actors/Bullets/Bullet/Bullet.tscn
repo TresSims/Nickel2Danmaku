@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://boin44n7dwfxx"]
+
+[ext_resource type="Script" path="res://Actors/Bullets/Bullet/Bullet.gd" id="1_lucho"]
+[ext_resource type="Texture2D" uid="uid://j68uhr3qwh0m" path="res://Actors/Bullets/BulletSS.png" id="2_bm1u0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pt0ts"]
+atlas = ExtResource("2_bm1u0")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_701d8"]
+size = Vector2(64, 20)
+
+[node name="Bullet" type="RigidBody2D"]
+collision_mask = 0
+script = ExtResource("1_lucho")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_pt0ts")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_701d8")
