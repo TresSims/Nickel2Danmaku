@@ -1,5 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2h3e6bx7qio6"]
+[gd_scene load_steps=9 format=3 uid="uid://b2h3e6bx7qio6"]
 
 [ext_resource type="PackedScene" uid="uid://boin44n7dwfxx" path="res://Actors/Bullets/Bullet/Bullet.tscn" id="1_v2qin"]
+[ext_resource type="Script" path="res://Actors/Bullets/Bullet_Bet/Bullet_Bet.gd" id="1_w75sq"]
+[ext_resource type="Texture2D" uid="uid://j68uhr3qwh0m" path="res://Actors/Bullets/BulletSS.png" id="2_7dc1l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2o7y"]
+atlas = ExtResource("2_7dc1l")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlfs1"]
+atlas = ExtResource("2_7dc1l")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boq56"]
+atlas = ExtResource("2_7dc1l")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yimq1"]
+atlas = ExtResource("2_7dc1l")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmtjw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2o7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlfs1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boq56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yimq1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Bullet" instance=ExtResource("1_v2qin")]
+script = ExtResource("1_w75sq")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_cmtjw")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.5)
