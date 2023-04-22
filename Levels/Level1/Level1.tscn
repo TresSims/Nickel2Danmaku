@@ -109,7 +109,7 @@ z_index = 1
 position = Vector2(618, 885)
 
 [node name="Bullet" parent="HBoxContainer/VBoxContainer/Sprite2D" instance=ExtResource("3_aelcu")]
-position = Vector2(284, 362)
+position = Vector2(649, 377)
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_direction = 2

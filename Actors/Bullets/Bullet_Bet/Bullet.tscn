@@ -1,21 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2h3e6bx7qio6"]
+[gd_scene load_steps=2 format=3 uid="uid://b2h3e6bx7qio6"]
 
-[ext_resource type="Script" path="res://Actors/Bullets/Bullet_Bet/Bullet_Bet.gd" id="1_w75sq"]
-[ext_resource type="Texture2D" uid="uid://j68uhr3qwh0m" path="res://Actors/Bullets/BulletSS.png" id="2_7dc1l"]
+[ext_resource type="PackedScene" uid="uid://boin44n7dwfxx" path="res://Actors/Bullets/Bullet/Bullet.tscn" id="1_v2qin"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pt0ts"]
-atlas = ExtResource("2_7dc1l")
-region = Rect2(0, 64, 64, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_701d8"]
-size = Vector2(64, 20)
-
-[node name="Bullet" type="RigidBody2D"]
-collision_mask = 0
-script = ExtResource("1_w75sq")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("AtlasTexture_pt0ts")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_701d8")
+[node name="Bullet" instance=ExtResource("1_v2qin")]
