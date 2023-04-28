@@ -7,3 +7,4 @@ All of our source and development files, as well as planning documents are inclu
 
 
 We've made this project using Godot4 as the game engine, so to run the project just open the root folder as a Godot project, and you should be good to go!
+
