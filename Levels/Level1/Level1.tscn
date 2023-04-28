@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://km7n274l66dj"]
 
 [ext_resource type="Texture2D" uid="uid://ig8wq7yahx87" path="res://Levels/Level1/BG.png" id="1_savf4"]
-[ext_resource type="PackedScene" uid="uid://boin44n7dwfxx" path="res://Actors/Bullets/Bullet/Bullet.tscn" id="3_aelcu"]
 [ext_resource type="PackedScene" uid="uid://bind8rvync2mo" path="res://Actors/Player/Player.tscn" id="3_bvn5h"]
+[ext_resource type="PackedScene" uid="uid://d3h7gpwkayxpn" path="res://EventSystem/event_system.tscn" id="3_mnejy"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v0gpt"]
 
@@ -108,8 +108,7 @@ shape = SubResource("SegmentShape2D_hqw3l")
 z_index = 1
 position = Vector2(618, 885)
 
-[node name="Bullet" parent="HBoxContainer/VBoxContainer/Sprite2D" instance=ExtResource("3_aelcu")]
-position = Vector2(649, 377)
+[node name="Timer" parent="HBoxContainer/VBoxContainer/Sprite2D" instance=ExtResource("3_mnejy")]
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_direction = 2

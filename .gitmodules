@@ -1,0 +1,3 @@
+[submodule "addons/Godot-CommandTimeline"]
+	path = addons/Godot-CommandTimeline
+	url = git@github.com:AnidemDex/Godot-CommandTimeline.git
