@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://km7n274l66dj"]
+[gd_scene load_steps=14 format=3 uid="uid://km7n274l66dj"]
 
 [ext_resource type="Texture2D" uid="uid://ig8wq7yahx87" path="res://Levels/Level1/BG.png" id="1_savf4"]
 [ext_resource type="PackedScene" uid="uid://bind8rvync2mo" path="res://Actors/Player/Player.tscn" id="3_bvn5h"]
 [ext_resource type="PackedScene" uid="uid://d3h7gpwkayxpn" path="res://EventSystem/event_system.tscn" id="3_mnejy"]
+[ext_resource type="PackedScene" uid="uid://5qoydmqch72o" path="res://DialogScenes/Dialog_L.tscn" id="4_75xdu"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v0gpt"]
 
@@ -109,6 +110,25 @@ z_index = 1
 position = Vector2(618, 885)
 
 [node name="Timer" parent="HBoxContainer/VBoxContainer/Sprite2D" instance=ExtResource("3_mnejy")]
+
+[node name="DialogEventAnchor" type="Control" parent="HBoxContainer/VBoxContainer/Sprite2D"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -310.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+
+[node name="MarginContainer" parent="HBoxContainer/VBoxContainer/Sprite2D/DialogEventAnchor" instance=ExtResource("4_75xdu")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_direction = 2
