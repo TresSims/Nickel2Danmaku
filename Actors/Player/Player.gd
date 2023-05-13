@@ -30,14 +30,11 @@ func _ready():
 
 
 func _physics_process(_delta):
-    if _event_system == null:
-        _event_system = get_node("../EventSystem")
-
-
     if not DIALOG:
         switch = process_switch()
         process_movement()
         process_fire()
+
 
     process_animation()
 
@@ -83,22 +80,19 @@ func process_animation():
 func process_fire():
     var fire = Input.is_action_pressed("fire")
     if fire:
-        if not DIALOG:
-            if _reload_timer.time_left == 0:
-                var new_bullet
-                if switch:
-                    # bet gun
-                    new_bullet = bet_bullet.instantiate()
-                else:
-                    # glitch gun
-                    new_bullet = glitch_bullet.instantiate()
+        if _reload_timer.time_left == 0:
+            var new_bullet
+            if switch:
+                # bet gun
+                new_bullet = bet_bullet.instantiate()
+            else:
+                # glitch gun
+                new_bullet = glitch_bullet.instantiate()
 
-                new_bullet.global_position = _bullet_spawner.global_position
-                print(new_bullet.global_position)
-                get_parent().add_child(new_bullet)
-                _reload_timer.start(reload_time)
-        else:
-            _event_system.next_event()
+            new_bullet.global_position = _bullet_spawner.global_position
+            print(new_bullet.global_position)
+            get_parent().add_child(new_bullet)
+            _reload_timer.start(reload_time)
 
 
 func get_hit():
