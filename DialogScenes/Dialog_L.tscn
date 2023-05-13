@@ -63,6 +63,7 @@ fit_content = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_5clfg")
+frame_progress = 0.536329
 speed_scale = 2.0
 centered = false
 offset = Vector2(90, 90)
