@@ -8,10 +8,13 @@ const VulnTime = 3
 var HP = 3
 var VULN = true
 
+var DIALOG = false
+
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var _vuln_timer = $VulnTimer
 @onready var _bullet_spawner = $BulletSpawner
 @onready var _reload_timer = $ReloadTimer
+var _event_system = null
 
 var glitch_bullet = preload("res://Actors/Bullets/Bullet_Glitch/Bullet.tscn")
 var bet_bullet = preload("res://Actors/Bullets/Bullet_Bet/Bullet.tscn")
@@ -21,20 +24,25 @@ var frame = 1
 
 var switch = false
 
-func ready():
+func _ready():
     _vuln_timer.start(0.5)
 
-func _physics_process(delta):
-    var switch = process_switch()
-    process_movement(switch)
-    process_animation(switch)
-    process_fire(switch)
+
+
+func _physics_process(_delta):
+    if not DIALOG:
+        switch = process_switch()
+        process_movement()
+        process_fire()
+
+
+    process_animation()
 
 
 func process_switch():
     return Input.is_action_pressed("switch")
 
-func process_movement(switch):
+func process_movement():
     # Directional Movement
     var lr = Input.get_axis("left", "right")
     var ud = Input.get_axis("up", "down")
@@ -49,7 +57,7 @@ func process_movement(switch):
 
     move_and_slide()
 
-func process_animation(switch):
+func process_animation():
     # Animation Frame
     if velocity.x > 0:
         frame = 2
@@ -69,21 +77,23 @@ func process_animation(switch):
     else:
         _animated_sprite.modulate.a = 1.0
 
-func process_fire(switch):
+func process_fire():
     var fire = Input.is_action_pressed("fire")
-    if fire and _reload_timer.time_left == 0:
-        var new_bullet
-        if switch:
-            # bet gun
-            new_bullet = bet_bullet.instantiate()
-        else:
-            # glitch gun
-            new_bullet = glitch_bullet.instantiate()
+    if fire:
+        if _reload_timer.time_left == 0:
+            var new_bullet
+            if switch:
+                # bet gun
+                new_bullet = bet_bullet.instantiate()
+            else:
+                # glitch gun
+                new_bullet = glitch_bullet.instantiate()
 
-        new_bullet.global_position = _bullet_spawner.global_position
-        print(new_bullet.global_position)
-        get_parent().add_child(new_bullet)
-        _reload_timer.start(reload_time)
+            new_bullet.global_position = _bullet_spawner.global_position
+            print(new_bullet.global_position)
+            get_parent().add_child(new_bullet)
+            _reload_timer.start(reload_time)
+
 
 func get_hit():
     if _vuln_timer.time_left == 0:

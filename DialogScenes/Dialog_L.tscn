@@ -1,30 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://5qoydmqch72o"]
+[gd_scene load_steps=6 format=3 uid="uid://5qoydmqch72o"]
 
 [ext_resource type="Texture2D" uid="uid://bpmph57h27qvy" path="res://Actors/Player/ExpressionsSS.png" id="1_fgsgl"]
+[ext_resource type="Script" path="res://DialogScenes/Dialog.gd" id="2_x756d"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kddep"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6riki"]
 atlas = ExtResource("1_fgsgl")
-region = Rect2(0, 0, 512, 512)
+region = Rect2(512, 0, 512, 512)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b37se"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_73huu"]
 atlas = ExtResource("1_fgsgl")
-region = Rect2(0, 512, 512, 512)
+region = Rect2(512, 512, 512, 512)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_y3e2a"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_5clfg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kddep")
+"texture": SubResource("AtlasTexture_6riki")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b37se")
+"texture": SubResource("AtlasTexture_73huu")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="MarginContainer" type="MarginContainer"]
+[node name="Dialog_L" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -34,6 +35,7 @@ theme_override_constants/margin_left = 256
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
+script = ExtResource("2_x756d")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(0, 0.388235, 0, 1)
@@ -55,13 +57,13 @@ theme_override_constants/margin_bottom = 5
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 32
-text = "Ugh, okay yeah I'll deal with the witch cats."
+text = "BET! THE WITCH CATS ARE BACK!"
 fit_content = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
-sprite_frames = SubResource("SpriteFrames_y3e2a")
-frame_progress = 0.250502
+sprite_frames = SubResource("SpriteFrames_5clfg")
 speed_scale = 2.0
 centered = false
 offset = Vector2(90, 90)
+flip_h = true
