@@ -1,0 +1,33 @@
+{
+	"nodes":[
+		{"type":"text","text":"# Level 1.tscn","id":"11b69850bb6ae27a","x":-573,"y":-261,"width":250,"height":60},
+		{"type":"text","text":"## Event System","id":"c26e481c7dea0a47","x":-573,"y":-40,"width":250,"height":60},
+		{"type":"text","text":"### Danmaku Event","id":"202adc7aba7ad043","x":-100,"y":-40,"width":250,"height":60},
+		{"type":"text","text":"### Danmaku Event","id":"dffdf71faa37f331","x":-100,"y":60,"width":250,"height":60},
+		{"type":"text","text":"### ...","id":"f24ece4e881d9e96","x":-100,"y":160,"width":250,"height":60},
+		{"type":"text","text":"#### Time To Next\n","id":"2e5b2e4647fa254e","x":320,"y":-70,"width":250,"height":60},
+		{"type":"text","text":"#### Dialog Scene?\n","id":"37faabceda792092","x":320,"y":30,"width":250,"height":60},
+		{"type":"text","text":"#### Starting Position\n","id":"134cf58be2c799ce","x":320,"y":120,"width":250,"height":60},
+		{"type":"text","text":"* top left\n* top center\n* top right\n* center\n* custom","id":"5c8f6f1e44a7b3d5","x":660,"y":120,"width":250,"height":169},
+		{"type":"text","text":"#### Scene\n","id":"a84d08b4bb550132","x":320,"y":-160,"width":250,"height":60},
+		{"type":"text","text":"##### Dialog","id":"7dc042dc0c378483","x":772,"y":-240,"width":250,"height":60},
+		{"type":"text","text":"##### Enemy","id":"c654bd66c8b736e2","x":772,"y":-130,"width":255,"height":60},
+		{"type":"text","text":"##### Cutscene","id":"ac0a9db49ab77b24","x":772,"y":-10,"width":250,"height":60},
+		{"id":"627f3b61eed66bd8","x":1220,"y":-145,"width":80,"height":75,"type":"file","file":"Mechanics/Enemy.canvas"}
+	],
+	"edges":[
+		{"id":"43b79815abda6b1b","fromNode":"11b69850bb6ae27a","fromSide":"bottom","toNode":"c26e481c7dea0a47","toSide":"top"},
+		{"id":"9b802f6298bc000a","fromNode":"c26e481c7dea0a47","fromSide":"right","toNode":"202adc7aba7ad043","toSide":"left"},
+		{"id":"9a7b39097ed18890","fromNode":"c26e481c7dea0a47","fromSide":"right","toNode":"dffdf71faa37f331","toSide":"left"},
+		{"id":"4319cab97936bcaf","fromNode":"c26e481c7dea0a47","fromSide":"right","toNode":"f24ece4e881d9e96","toSide":"left"},
+		{"id":"20913627ef540bc4","fromNode":"202adc7aba7ad043","fromSide":"right","toNode":"a84d08b4bb550132","toSide":"left"},
+		{"id":"658bb9960db4585f","fromNode":"202adc7aba7ad043","fromSide":"right","toNode":"2e5b2e4647fa254e","toSide":"left"},
+		{"id":"5f629653f49f60e5","fromNode":"202adc7aba7ad043","fromSide":"right","toNode":"37faabceda792092","toSide":"left"},
+		{"id":"005c6aabe32596e1","fromNode":"202adc7aba7ad043","fromSide":"right","toNode":"134cf58be2c799ce","toSide":"left"},
+		{"id":"f9b475470b30d883","fromNode":"134cf58be2c799ce","fromSide":"right","toNode":"5c8f6f1e44a7b3d5","toSide":"left"},
+		{"id":"7c430fdfca73b9d3","fromNode":"a84d08b4bb550132","fromSide":"right","toNode":"7dc042dc0c378483","toSide":"left"},
+		{"id":"77794033d0b9cc57","fromNode":"a84d08b4bb550132","fromSide":"right","toNode":"c654bd66c8b736e2","toSide":"left"},
+		{"id":"c67f0d45b08bdd3f","fromNode":"a84d08b4bb550132","fromSide":"right","toNode":"ac0a9db49ab77b24","toSide":"left"},
+		{"id":"5736cf3c0402fb1a","fromNode":"c654bd66c8b736e2","fromSide":"right","toNode":"627f3b61eed66bd8","toSide":"left"}
+	]
+}

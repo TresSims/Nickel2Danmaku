@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"type":"text","text":"## Randomized Sprite","id":"7fe99800b206f7a2","x":-540,"y":20,"width":285,"height":60},
+		{"type":"text","text":"## Movement Pattern","id":"6952eaa47f68af33","x":-185,"y":20,"width":314,"height":62},
+		{"type":"text","text":"### Linear","id":"c58c623218ebc2f1","x":-310,"y":220,"width":250,"height":60},
+		{"type":"text","text":"### Sinusoidal","id":"87a1e4cfe65e31ad","x":-28,"y":220,"width":250,"height":60},
+		{"type":"text","text":"## Collision Effect","id":"09531efba93808c7","x":260,"y":20,"width":250,"height":60},
+		{"id":"6bd5a396b76717f0","x":573,"y":21,"width":250,"height":60,"type":"text","text":"## SFX\n"},
+		{"type":"text","text":"# Bullet\n","id":"362b0033162048d4","x":10,"y":-260,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"40433e369d7fcd04","fromNode":"362b0033162048d4","fromSide":"bottom","toNode":"7fe99800b206f7a2","toSide":"top"},
+		{"id":"ce508dfcfc155c4a","fromNode":"362b0033162048d4","fromSide":"bottom","toNode":"6952eaa47f68af33","toSide":"top"},
+		{"id":"fc99525bfb036b74","fromNode":"6952eaa47f68af33","fromSide":"bottom","toNode":"c58c623218ebc2f1","toSide":"top"},
+		{"id":"babff6c34e7e1dcb","fromNode":"6952eaa47f68af33","fromSide":"bottom","toNode":"87a1e4cfe65e31ad","toSide":"top"},
+		{"id":"0d29f1b853bc52c2","fromNode":"362b0033162048d4","fromSide":"bottom","toNode":"09531efba93808c7","toSide":"top"},
+		{"id":"4e485644b5a418a3","fromNode":"362b0033162048d4","fromSide":"bottom","toNode":"6bd5a396b76717f0","toSide":"top"}
+	]
+}

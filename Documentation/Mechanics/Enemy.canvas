@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"type":"text","text":"# Enemy","id":"143759d64463be0e","x":140,"y":-200,"width":250,"height":60},
+		{"type":"text","text":"## Bullet Spawner","id":"a2592c4bc5be0add","x":680,"y":40,"width":250,"height":60},
+		{"type":"text","text":"## Movement","id":"cbcb2cebde0f0064","x":200,"y":40,"width":250,"height":60},
+		{"type":"text","text":"#### Tracking","id":"bd07d2e6ee348cb4","x":75,"y":260,"width":250,"height":60},
+		{"type":"text","text":"#### Straight","id":"aba21d2cb85047eb","x":380,"y":260,"width":250,"height":60},
+		{"type":"text","text":"## Hitbox","id":"6e2a03bd001a5f01","x":-300,"y":40,"width":250,"height":60},
+		{"type":"text","text":"## Animated Sprite","id":"1ee7b9274bd337cd","x":-720,"y":40,"width":250,"height":60},
+		{"type":"text","text":"#### Damage Player On Impact?","id":"5d5da79577f4b73f","x":-300,"y":260,"width":250,"height":60},
+		{"type":"text","text":"### Create Bullets","id":"b8a8465ada36054d","x":700,"y":260,"width":250,"height":60},
+		{"id":"8dc56b86b83b9619","x":750,"y":440,"width":150,"height":140,"type":"file","file":"Mechanics/Bullet.canvas"},
+		{"id":"88caaeb352b8d1c4","x":980,"y":40,"width":360,"height":60,"type":"text","text":"## Spawn Coins on Death"},
+		{"id":"b298f427991347ca","x":1035,"y":260,"width":250,"height":60,"type":"text","text":"### Coins\n"}
+	],
+	"edges":[
+		{"id":"92570ea9d76fac33","fromNode":"143759d64463be0e","fromSide":"bottom","toNode":"1ee7b9274bd337cd","toSide":"top"},
+		{"id":"6c7a472268a4d67b","fromNode":"143759d64463be0e","fromSide":"bottom","toNode":"6e2a03bd001a5f01","toSide":"top"},
+		{"id":"9650f24c905e368c","fromNode":"143759d64463be0e","fromSide":"bottom","toNode":"a2592c4bc5be0add","toSide":"top"},
+		{"id":"a244b219d1ff153f","fromNode":"143759d64463be0e","fromSide":"bottom","toNode":"cbcb2cebde0f0064","toSide":"top"},
+		{"id":"e782f7c783c27539","fromNode":"cbcb2cebde0f0064","fromSide":"bottom","toNode":"bd07d2e6ee348cb4","toSide":"top"},
+		{"id":"70e68c27b6961d78","fromNode":"cbcb2cebde0f0064","fromSide":"bottom","toNode":"aba21d2cb85047eb","toSide":"top"},
+		{"id":"396b95f1fd1c06de","fromNode":"6e2a03bd001a5f01","fromSide":"bottom","toNode":"5d5da79577f4b73f","toSide":"top"},
+		{"id":"ce6a01da9d5bd6ef","fromNode":"a2592c4bc5be0add","fromSide":"bottom","toNode":"b8a8465ada36054d","toSide":"top"},
+		{"id":"e928629ac3c2ada4","fromNode":"b8a8465ada36054d","fromSide":"bottom","toNode":"8dc56b86b83b9619","toSide":"top"},
+		{"id":"a8e373b3bc4c75ba","fromNode":"143759d64463be0e","fromSide":"bottom","toNode":"88caaeb352b8d1c4","toSide":"top"},
+		{"id":"4d70b12d3ac72186","fromNode":"88caaeb352b8d1c4","fromSide":"bottom","toNode":"b298f427991347ca","toSide":"top"}
+	]
+}
