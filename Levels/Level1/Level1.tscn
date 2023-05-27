@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://km7n274l66dj"]
+[gd_scene load_steps=19 format=3 uid="uid://km7n274l66dj"]
 
 [ext_resource type="Texture2D" uid="uid://ig8wq7yahx87" path="res://Levels/Level1/BG.png" id="1_savf4"]
 [ext_resource type="PackedScene" uid="uid://d3h7gpwkayxpn" path="res://EventSystem/event_system.tscn" id="3_65ri2"]
@@ -50,6 +50,27 @@ event_scene = "res://DialogScenes/Dialog_R.tscn"
 time_to_next = -1.0
 position = Vector2(0, 0)
 dialog_event = true
+
+[sub_resource type="Resource" id="Resource_cn2j5"]
+script = ExtResource("4_d0dtc")
+event_scene = "res://Actors/Enemy/Enemy.tscn"
+time_to_next = 0.2
+position = Vector2(70, 260)
+dialog_event = false
+
+[sub_resource type="Resource" id="Resource_32j6f"]
+script = ExtResource("4_d0dtc")
+event_scene = "res://Actors/Enemy/Enemy.tscn"
+time_to_next = 0.2
+position = Vector2(70, 260)
+dialog_event = false
+
+[sub_resource type="Resource" id="Resource_58tq8"]
+script = ExtResource("4_d0dtc")
+event_scene = "res://Actors/Enemy/Enemy.tscn"
+time_to_next = 0.2
+position = Vector2(70, 260)
+dialog_event = false
 
 [node name="MarginContainer" type="MarginContainer"]
 material = SubResource("CanvasItemMaterial_v0gpt")
@@ -123,7 +144,7 @@ shape = SubResource("SegmentShape2D_hqw3l")
 position = Vector2(568, 850)
 
 [node name="EventSystem" parent="HBoxContainer/VBoxContainer/GameRoot" instance=ExtResource("3_65ri2")]
-event_dict = Array[ExtResource("4_d0dtc")]([SubResource("Resource_4tebp"), SubResource("Resource_qqhk6")])
+event_dict = Array[ExtResource("4_d0dtc")]([SubResource("Resource_4tebp"), SubResource("Resource_qqhk6"), SubResource("Resource_cn2j5"), SubResource("Resource_32j6f"), SubResource("Resource_58tq8")])
 
 [node name="DialogEventAnchor" type="Control" parent="HBoxContainer/VBoxContainer/GameRoot"]
 layout_mode = 3
