@@ -1,5 +1,4 @@
 extends RigidBody2D
-
 class_name Bullet
 
 # Physics variables
@@ -20,7 +19,6 @@ func setup_colision():
     contact_monitor = true
     max_contacts_reported = 2
 
-
 func setup_sprite():
     _sprite.pause()
     # set initial rotation
@@ -37,6 +35,7 @@ func setup_sprite():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
     move_and_collide(self.dir*self.speed)
+    print("bullet Angle %d" dir.angle())
     _sprite.rotation = dir.angle()
 
 func _on_body_entered(body:Node):
