@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://bind8rvync2mo"]
+[gd_scene load_steps=12 format=3 uid="uid://bind8rvync2mo"]
 
-[ext_resource type="Script" path="res://Actors/Player/Player.gd" id="1_i8mc7"]
+[ext_resource type="Script" path="res://Actors/Player/Player.gd" id="1_ld03u"]
 [ext_resource type="Texture2D" uid="uid://dp3emxhorvutk" path="res://Actors/Player/PlayerSS.png" id="2_8765l"]
+[ext_resource type="PackedScene" uid="uid://d1ih5pah7tih8" path="res://Actors/Bullets/BulletSpawner/BulletSpawner.tscn" id="3_43ev8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ywb5b"]
 atlas = ExtResource("2_8765l")
@@ -60,7 +61,7 @@ radius = 12.0
 collision_mask = 3
 motion_mode = 1
 platform_on_leave = 2
-script = ExtResource("1_i8mc7")
+script = ExtResource("1_ld03u")
 
 [node name="VulnTimer" type="Timer" parent="."]
 wait_time = 3.0
@@ -80,5 +81,7 @@ frame_progress = 0.0478822
 position = Vector2(0, -9)
 shape = SubResource("CircleShape2D_obehr")
 
-[node name="BulletSpawner" type="Node2D" parent="."]
-position = Vector2(0, -91)
+[node name="BulletSpawner" parent="." instance=ExtResource("3_43ev8")]
+radius = 100.0
+direction = Vector2(1, -1)
+amount = 1

@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 
 const SPEED = 600.0
@@ -16,8 +17,8 @@ var DIALOG = false
 @onready var _reload_timer = $ReloadTimer
 var _event_system = null
 
-var glitch_bullet = preload("res://Actors/Bullets/Bullet_Glitch/Bullet.tscn")
-var bet_bullet = preload("res://Actors/Bullets/Bullet_Bet/Bullet.tscn")
+var glitch_bullet = "res://Actors/Bullets/Bullet_Glitch/Bullet.tscn"
+var bet_bullet = "res://Actors/Bullets/Bullet_Bet/Bullet.tscn"
 var reload_time = 0.2
 
 var frame = 1
@@ -81,17 +82,12 @@ func process_fire():
     var fire = Input.is_action_pressed("fire")
     if fire:
         if _reload_timer.time_left == 0:
-            var new_bullet
-            if switch:
-                # bet gun
-                new_bullet = bet_bullet.instantiate()
+            if(switch):
+                _bullet_spawner.ready_spawner(bet_bullet)
             else:
-                # glitch gun
-                new_bullet = glitch_bullet.instantiate()
+                _bullet_spawner.ready_spawner(glitch_bullet)
 
-            new_bullet.global_position = _bullet_spawner.global_position
-            print(new_bullet.global_position)
-            get_parent().add_child(new_bullet)
+            _bullet_spawner.spawn_bullet()
             _reload_timer.start(reload_time)
 
 
