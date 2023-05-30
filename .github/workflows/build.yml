@@ -1,6 +1,3 @@
-- name: Build Godot
-  uses: yeslayla/build-godot-action@v1.4.1
-
 on: [push]
 
 jobs:
@@ -14,7 +11,7 @@ jobs:
         lfs: false
     - name: Build
       id: buld
-      uses: manleydev/build-godot-action@v1.4.1
+      uses: yeslayal/build-godot-action@v1.4.1
       with:
         name: example
         preset: ${{matrix.platform }}
