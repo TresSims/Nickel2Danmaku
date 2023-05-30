@@ -1,7 +1,7 @@
-on:
-  pull_request:
-    branches:
-      - main
+- name: Build Godot
+  uses: yeslayla/build-godot-action@v1.4.1
+
+on: [push]
 
 jobs:
   runs-on: ubuntu-latest
