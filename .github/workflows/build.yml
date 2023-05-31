@@ -31,3 +31,9 @@ jobs:
         with:
           name: linux
           path: build/linux
+      - name: release
+        uses: softprops/actions-gh-release@v1
+        with:
+          prerelease: true
+          name: latest
+
