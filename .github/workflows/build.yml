@@ -36,4 +36,5 @@ jobs:
         with:
           prerelease: true
           name: latest
+          tag_name: v0.0.1-alpha
 
