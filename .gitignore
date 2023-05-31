@@ -3,3 +3,6 @@
 
 # Directories for Obsidian Notes
 .obsidian
+
+# Build directory
+build/
