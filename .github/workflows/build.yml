@@ -33,7 +33,6 @@ jobs:
           path: build/linux
       - name: release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'CI_CD')
         with:
           prerelease: true
           name: latest
