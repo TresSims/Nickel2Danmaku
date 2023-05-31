@@ -39,5 +39,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           prerelease: true
-          name: latest
+          files: ./build/linux/$EXPORT_NAME.x86_64
 
