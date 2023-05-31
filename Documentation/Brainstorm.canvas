@@ -21,16 +21,17 @@
 		{"type":"text","text":"##### Spell","id":"dcb537e3cf669f45","x":490,"y":1668,"width":250,"height":60},
 		{"type":"text","text":"##### Signature Spell","id":"6c34a1c11a369b3f","x":711,"y":1789,"width":250,"height":60},
 		{"type":"text","text":"#### 4) Boss","id":"393bac140c629459","x":355,"y":840,"width":250,"height":80},
-		{"type":"text","text":"#### 1) Witch Cats","id":"1823d018555f9e3d","x":-640,"y":600,"width":250,"height":60},
 		{"type":"text","text":"#### 2) Mid Boss","id":"2ce5849f5cdf9319","x":-265,"y":680,"width":250,"height":60},
 		{"type":"text","text":"#### Mid Boss","id":"29d8db25abf73549","x":1071,"y":1186,"width":250,"height":72},
 		{"type":"text","text":"#### Bossees","id":"a802dd305988a56f","x":1225,"y":1018,"width":250,"height":60},
 		{"type":"text","text":"#### Final Boss","id":"16d5217c72c13e3b","x":1364,"y":1186,"width":250,"height":72},
-		{"type":"text","text":"#### 3) Witch Cats","id":"310c20f708de0011","x":54,"y":740,"width":250,"height":60},
 		{"type":"text","text":"# Glitch","id":"7aec98fa2a910b24","x":-1225,"y":-10,"width":250,"height":60},
 		{"type":"text","text":"# Bet","id":"68a1f7dad3b99319","x":-765,"y":-10,"width":250,"height":60},
 		{"type":"text","text":"# Ick","id":"71b33184ad16cf6a","x":-1015,"y":-230,"width":250,"height":60},
-		{"type":"text","text":"# Transported to Another Realm","id":"37b4d6187e441234","x":426,"y":-251,"width":285,"height":102}
+		{"type":"text","text":"# Transported to Another Realm","id":"37b4d6187e441234","x":426,"y":-251,"width":285,"height":102},
+		{"id":"7747a89d3f3eac63","x":-590,"y":364,"width":250,"height":60,"type":"text","text":"#### Character Select?"},
+		{"type":"text","text":"#### 1) Witch Cats","id":"1823d018555f9e3d","x":-640,"y":680,"width":250,"height":60},
+		{"type":"text","text":"#### 3) Witch Cats","id":"310c20f708de0011","x":65,"y":680,"width":250,"height":60}
 	],
 	"edges":[
 		{"id":"da8757ebeb5e08a7","fromNode":"37b4d6187e441234","fromSide":"bottom","toNode":"6545f3213c8cbd67","toSide":"top"},
@@ -74,6 +75,7 @@
 		{"id":"a763b496215ad9a7","fromNode":"393bac140c629459","fromSide":"bottom","toNode":"6c34a1c11a369b3f","toSide":"top"},
 		{"id":"a520708d1abf6c24","fromNode":"9aa6196100e952cd","fromSide":"bottom","toNode":"dcb537e3cf669f45","toSide":"top"},
 		{"id":"63916bc626ff2b54","fromNode":"9aa6196100e952cd","fromSide":"bottom","toNode":"6c34a1c11a369b3f","toSide":"top"},
-		{"id":"08e16313fb6508b9","fromNode":"0da4ba33ebdbb96c","fromSide":"bottom","toNode":"310c20f708de0011","toSide":"top"}
+		{"id":"08e16313fb6508b9","fromNode":"0da4ba33ebdbb96c","fromSide":"bottom","toNode":"310c20f708de0011","toSide":"top"},
+		{"id":"cd477904343eec37","fromNode":"0da4ba33ebdbb96c","fromSide":"bottom","toNode":"7747a89d3f3eac63","toSide":"top"}
 	]
 }
