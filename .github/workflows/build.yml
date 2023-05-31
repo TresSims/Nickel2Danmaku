@@ -4,7 +4,7 @@ on: push
 env:
   GODOT_VERSION: 3.3.4
   EXPORT_NAME: Nickel2Danmaku
-  PROJECT_PATH: Nickel2Danmaku
+  PROJECT_PATH: .
   
 jobs:
   export-windows:
