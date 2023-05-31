@@ -17,7 +17,7 @@ jobs:
       - name: Install Tools
         run: |
           sudo apt-get update
-          sudo apt-get install xorg libnvidia
+          sudo apt-get install xorg
       - name: Build
         id: build
         uses: yeslayla/build-godot-action@v1.4.1
