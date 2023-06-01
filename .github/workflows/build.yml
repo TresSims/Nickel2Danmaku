@@ -41,8 +41,8 @@ jobs:
         uses: vimtor/action-zip@v1
         with:
           files: |
-            ./build/linux/$EXPORT_NAME.x86_64
-            ./build/linux/$EXPORT_NAME.pck
+            ./build/linux/Nickel2Danmaku.x86_64
+            ./build/linux/Nickel2Danmaku.pck
           dest: ./build/linux/linux.zip
       - name: release
         uses: softprops/action-gh-release@v1
