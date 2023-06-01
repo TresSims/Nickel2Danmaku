@@ -39,5 +39,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           prerelease: true
-          files: ./build/linux/$EXPORT_NAME.x86_64
+          files: ./build/linux/Nickel2Danmaku.x86_64
 
