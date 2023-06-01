@@ -44,10 +44,13 @@ jobs:
         continue-on-error: true
         with:
           prerelease: true
+          files: |
+            ./build/linux/linux.zip
       - name: release-try-2
         uses: softprops/action-gh-release@v1
         continue-on-error: true
         with:
           prerelease: true
+          files: ./build/linux/linux.zip
 
 
