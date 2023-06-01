@@ -44,8 +44,8 @@ jobs:
         with:
           files: |
             ./build/linux/$EXPORT_NAME.x86_64
-            ./build/linux/$EXPORT_NAME.pac
-          dest: linux.zip
+            ./build/linux/$EXPORT_NAME.pck
+          dest: ./build/linux/linux.zip
       - name: release
         uses: softprops/action-gh-release@v1
         continue-on-error: true
