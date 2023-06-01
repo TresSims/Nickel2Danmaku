@@ -39,13 +39,19 @@ jobs:
         with:
           name: linux
           path: build/linux
+      - name: package
+        uses: vimtor/actions-zip@v1
+        with:
+          files: |
+            ./build/linux/$EXPORT_NAME.x86_64
+            ./build/linux/$EXPORT_NAME.pac
+          dest: linux.zip
       - name: release
         uses: softprops/action-gh-release@v1
         continue-on-error: true
         with:
           prerelease: true
-          files: |
-            ./build/linux/linux.zip
+          files: ./build/linux/linux.zip
       - name: release-try-2
         uses: softprops/action-gh-release@v1
         continue-on-error: true
