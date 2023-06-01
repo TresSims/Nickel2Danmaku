@@ -40,7 +40,7 @@ jobs:
           name: linux
           path: build/linux
       - name: package
-        uses: vimtor/actions-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: |
             ./build/linux/$EXPORT_NAME.x86_64
