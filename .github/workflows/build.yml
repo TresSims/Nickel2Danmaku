@@ -4,6 +4,10 @@ on:
     tags:
       - "v*.*.*"
 
+permissions:
+  content:
+    write
+
 
 env:
   GODOT_VERSION: 3.3.4
