@@ -1,5 +1,5 @@
 name: "godot-ci export"
-on: 
+on:
   push:
     tags:
       - "v*.*.*"
@@ -13,13 +13,13 @@ env:
   GODOT_VERSION: 3.3.4
   EXPORT_NAME: Nickel2Danmaku
   PROJECT_PATH: .
-  
+
 jobs:
   export-linux:
     name: Linux Export
     runs-on: ubuntu-20.04
     container:
-      image: barichello/godot-ci:3.3.4
+      image: barichello/godot-ci:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
