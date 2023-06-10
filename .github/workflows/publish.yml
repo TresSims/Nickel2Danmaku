@@ -32,7 +32,7 @@ jobs:
           APP_NAME: ${{ env.app_name }}
           PRESET: ${{ matrix.preset }}
         run: |
-          version=${GITHUB_REF/refs\/tags\/v/:-}
+          version=${GITHUB_REF/refs\/tags\/v/}
           echo "version=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
           echo "package=${APP_NAME}-v${version}-${PRESET}.zip" >> $GITHUB_ENV
       - name: Export ${{ matrix.preset }} from Godot
