@@ -36,7 +36,7 @@ jobs:
           echo "version=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
           echo "package=${APP_NAME}-v${version}-${PRESET}.zip" >> $GITHUB_ENV
       - name: Export ${{ matrix.preset }} from Godot
-        uses: robpc/godot-export-action@v4.0.2
+        uses: robpc/godot-export-action@v4.0.3
         with:
           preset: ${{ matrix.preset }}
           export_path: build/${{ matrix.preset }}/${{ matrix.export_file }}
