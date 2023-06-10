@@ -89,15 +89,21 @@ Glitch: At least we caught up to the culprit. Alright you, fess up, what are you
 
 Misty: Uh-oh, you two are faster than you look. Guess it can't be helped. 
 
-Bet: Seriously, aren't Witch Kit's dangerous? Should so many of them be in this close contact? Some of them look full, too...
+Bet: Wow. That's a lot of cats. I don't think I've ever seen so many in one area...
 
-Misty: My cuties are definitely getting their fill of souls. Dr. K says we need lots of 'em for the ritual.
+Glitch: Normally Kits are harmless...but so many of them in one area... a good amount of them look full....
+
+Misty: My babies are definitely getting their fill of souls. Dr. K says we need lots of 'em for the ritual.
 
 Glitch: The ritual...? 
 
-Bet: I dunno who you're pretending we know, lady, but there's no way we can let you keep collectin' all this energy.
+Bet: I dunno who you're pretending we know, lady, but there's no way we can let you keep collectin' all this energy! 
 
-Misty:  Haven't you boys ever heard what happens to the curious cats?
+Misty:  Haven't you boys ever heard what happens to curious cats? 
+
+# Gameplay 
+Misty's official battle has 3 regular bullet patterns and 2 spell cards.
+The regular bullet patterns will include cats zig zagging down and shooting roughly in the direction of the player. She will shoot bullets in a straight line via direction queues of a line, followed by a blast of bullets in a direction.
 
 
 

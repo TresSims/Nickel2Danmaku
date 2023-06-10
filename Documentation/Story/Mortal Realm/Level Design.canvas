@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"type":"text","text":"# Backgrounds","id":"544cc01a3ab80a67","x":-140,"y":-300,"width":250,"height":60},
+		{"type":"text","text":"Scrolling sparse amount of trees that gets thicker up to midboss","id":"10f81e17bf79ff4f","x":-141,"y":-179,"width":250,"height":79},
+		{"type":"text","text":"## MidBoss","id":"8e2e748e3213b316","x":196,"y":-21,"width":250,"height":60},
+		{"type":"text","text":"Circle Clearing ","id":"c36161efbbc2e92e","x":-99,"y":-21,"width":166,"height":60},
+		{"id":"0bbb5e741e8e3edc","x":-141,"y":240,"width":250,"height":120,"type":"text","text":"Thicker Trees, Eyes in the background slowly emerging as more cats show"},
+		{"type":"text","text":"## Tutorial","id":"b668a745afc23dc9","x":200,"y":-169,"width":159,"height":60},
+		{"id":"46fe20ec1ea255f4","x":-145,"y":489,"width":250,"height":131,"type":"text","text":"Similar Circle Clearing, More Trees, Cats and Cat eyes everywhere. Portal wayyy in the background."},
+		{"type":"text","text":"x1  Spell Card BG","id":"177f9b213b32e50a","x":196,"y":120,"width":250,"height":60},
+		{"id":"c23cb82993668874","x":196,"y":526,"width":250,"height":60,"type":"text","text":"## Stage 1 Boss"},
+		{"id":"61a37731a0199a40","x":196,"y":700,"width":250,"height":60,"type":"text","text":"N Spell Card BG(s)"},
+		{"id":"e9d7bb1ba4eb8d23","x":196,"y":250,"width":250,"height":100,"type":"text","text":"## Tutorial for slow movements"}
+	],
+	"edges":[
+		{"id":"a9c55911f7a34ad2","fromNode":"544cc01a3ab80a67","fromSide":"bottom","toNode":"10f81e17bf79ff4f","toSide":"top"},
+		{"id":"5b3fd90dcdfa2ef9","fromNode":"10f81e17bf79ff4f","fromSide":"right","toNode":"b668a745afc23dc9","toSide":"left"},
+		{"id":"aa2bb79c5a4a431b","fromNode":"10f81e17bf79ff4f","fromSide":"bottom","toNode":"c36161efbbc2e92e","toSide":"top"},
+		{"id":"d70037e9dba40c04","fromNode":"c36161efbbc2e92e","fromSide":"right","toNode":"8e2e748e3213b316","toSide":"left"},
+		{"id":"20269c7817d68769","fromNode":"8e2e748e3213b316","fromSide":"bottom","toNode":"177f9b213b32e50a","toSide":"top"},
+		{"id":"a95cca00878acfcb","fromNode":"c36161efbbc2e92e","fromSide":"bottom","toNode":"0bbb5e741e8e3edc","toSide":"top"},
+		{"id":"249b399af6140a00","fromNode":"0bbb5e741e8e3edc","fromSide":"right","toNode":"e9d7bb1ba4eb8d23","toSide":"left"},
+		{"id":"6eade2e9e4a460b7","fromNode":"0bbb5e741e8e3edc","fromSide":"bottom","toNode":"46fe20ec1ea255f4","toSide":"top"},
+		{"id":"6ba4b0d60569adf2","fromNode":"46fe20ec1ea255f4","fromSide":"right","toNode":"c23cb82993668874","toSide":"left"},
+		{"id":"4e538b8946052031","fromNode":"c23cb82993668874","fromSide":"bottom","toNode":"61a37731a0199a40","toSide":"top"}
+	]
+}
